@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://54mge5u0yi8b"]
+
+[ext_resource type="Texture2D" uid="uid://cqfl6lellm7d1" path="res://addons/enemies/Eyer.png" id="1_ebp7q"]
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_r5ih2"]
+[ext_resource type="PackedScene" uid="uid://bbiwi3g3cty66" path="res://misc/skull.tscn" id="2_jh22y"]
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="4_vt055"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bgly"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(0, 49, 150, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oesd4"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(150, 49, 150, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3skwt"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(300, 49, 150, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqesd"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(450, 49, 150, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t6nb"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(600, 49, 150, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfdux"]
+atlas = ExtResource("1_ebp7q")
+region = Rect2(750, 49, 150, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6b31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bgly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oesd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3skwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqesd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t6nb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfdux")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ugyxn"]
+radius = 9.0
+height = 34.0
+
+[node name="eye" type="CharacterBody2D" groups=["enemies", "enemies_level_1"]]
+motion_mode = 1
+script = ExtResource("1_r5ih2")
+death_prefab = ExtResource("2_jh22y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, -39)
+scale = Vector2(2.28486, 2.57424)
+sprite_frames = SubResource("SpriteFrames_g6b31")
+autoplay = "default"
+frame_progress = 0.776518
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_ugyxn")
+
+[node name="FollowPlayer" type="Node" parent="."]
+script = ExtResource("4_vt055")
+speed = 1.6
+
+[node name="DamageDigitMarker" type="Marker2D" parent="."]
+position = Vector2(0, -59)
