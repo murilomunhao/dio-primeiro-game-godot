@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5plgare6ceh3"]
+
+[ext_resource type="Script" path="res://systems/mob_spawner.gd" id="1_limp2"]
+
+[sub_resource type="Curve2D" id="Curve2D_qspyc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -894.894, -470.332, 0, 0, 0, 0, -166.555, -483.259, 0, 0, 0, 0, 889.472, -480.276, 0, 0, 0, 0, 912.513, 7.96561, 0, 0, 0, 0, 898.432, 534.988, 0, 0, 0, 0, -32.1517, 559.847, 0, 0, 0, 0, -1081.78, 555.87, 0, 0, 0, 0, -1191.86, -14.9052, 0, 0, 0, 0, -1026.74, -425.585)
+}
+point_count = 9
+
+[node name="MobSpawner" type="Node2D"]
+position = Vector2(555, 326)
+script = ExtResource("1_limp2")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(66.1179, -38.0106)
+scale = Vector2(0.78123, 1.00565)
+curve = SubResource("Curve2D_qspyc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(23.7108, -482.721)
+rotation = 0.00282488
+progress = 918.725
+
+[node name="_Timer_250281" type="Timer" parent="Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true
