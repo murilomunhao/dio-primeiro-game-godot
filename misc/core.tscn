@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5aeyotyxtr5o"]
+
+[ext_resource type="Texture2D" uid="uid://d0x2b4ycc5b2i" path="res://addons/resource/Heart.png" id="1_x7fax"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_dovec"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjlu3"]
+atlas = ExtResource("1_x7fax")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2kuo"]
+atlas = ExtResource("1_x7fax")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xeeq"]
+atlas = ExtResource("1_x7fax")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srowv"]
+atlas = ExtResource("1_x7fax")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqt6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjlu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2kuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xeeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srowv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bc4t"]
+radius = 7.00602
+
+[node name="Core" type="AnimatedSprite2D" groups=["heals_level_1"]]
+position = Vector2(1.13687e-13, -1)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_pqt6v")
+autoplay = "default"
+frame = 2
+frame_progress = 0.515674
+offset = Vector2(1.10973e-06, -5.81818)
+script = ExtResource("2_dovec")
+regeneration_amount = 20
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.61451e-14, -6.98182)
+shape = SubResource("CircleShape2D_1bc4t")

@@ -1,0 +1,101 @@
+[gd_scene load_steps=15 format=3 uid="uid://by574y7sclpae"]
+
+[ext_resource type="Texture2D" uid="uid://bpod4sivruiep" path="res://addons/resource/GEM 6 - PURPLE - Spritesheet.png" id="1_1yort"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_kdsx7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlf3a"]
+atlas = ExtResource("1_1yort")
+region = Rect2(0, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68sry"]
+atlas = ExtResource("1_1yort")
+region = Rect2(24, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orvnl"]
+atlas = ExtResource("1_1yort")
+region = Rect2(48, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjysi"]
+atlas = ExtResource("1_1yort")
+region = Rect2(72, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sipwt"]
+atlas = ExtResource("1_1yort")
+region = Rect2(96, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htdoi"]
+atlas = ExtResource("1_1yort")
+region = Rect2(120, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppwf1"]
+atlas = ExtResource("1_1yort")
+region = Rect2(144, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v22f"]
+atlas = ExtResource("1_1yort")
+region = Rect2(168, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aemrf"]
+atlas = ExtResource("1_1yort")
+region = Rect2(192, 0, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48s14"]
+atlas = ExtResource("1_1yort")
+region = Rect2(216, 0, 24, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqt6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlf3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68sry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orvnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjysi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sipwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htdoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppwf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v22f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aemrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48s14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bc4t"]
+radius = 7.00602
+
+[node name="Precious" type="AnimatedSprite2D" groups=["heals_level_2"]]
+position = Vector2(1.13687e-13, -1)
+sprite_frames = SubResource("SpriteFrames_pqt6v")
+autoplay = "default"
+frame = 7
+frame_progress = 0.285953
+offset = Vector2(1.10973e-06, -5.81818)
+script = ExtResource("2_kdsx7")
+regeneration_amount = 20
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.61451e-14, -6.98182)
+shape = SubResource("CircleShape2D_1bc4t")
