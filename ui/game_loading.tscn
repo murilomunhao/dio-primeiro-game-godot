@@ -1,0 +1,468 @@
+[gd_scene load_steps=42 format=3 uid="uid://bblb70m4rps8g"]
+
+[ext_resource type="Texture2D" uid="uid://bwgta6uwa3qbn" path="res://addons/Ui/Banners/Carved_3Slides.png" id="1_063di"]
+[ext_resource type="Script" path="res://ui/game_loading.gd" id="1_vtlr5"]
+[ext_resource type="Texture2D" uid="uid://hd51151hus2w" path="res://addons/Ui/Banners/Carved_9Slides.png" id="2_mrhn8"]
+[ext_resource type="Texture2D" uid="uid://d1h1uxy3r2kpu" path="res://addons/Ui/ExportedIcons/Icon_Heart.png" id="3_mf6kj"]
+[ext_resource type="Texture2D" uid="uid://b5lbxhykkgcrf" path="res://addons/Ui/ExportedIcons/Icon_Diamond.png" id="4_cers7"]
+[ext_resource type="Texture2D" uid="uid://b7l2blao08gcy" path="res://addons/Teclas/T_W_Key_White.png" id="5_b3vei"]
+[ext_resource type="Texture2D" uid="uid://dkorsc8jiiof1" path="res://addons/Teclas/T_S_Key_White.png" id="6_wliyx"]
+[ext_resource type="Texture2D" uid="uid://d0jsnaresxawr" path="res://addons/Teclas/T_A_Key_White.png" id="7_4fe4y"]
+[ext_resource type="Texture2D" uid="uid://dkti3hdsgcf6n" path="res://addons/Teclas/T_D_Key_White.png" id="8_tiolq"]
+[ext_resource type="Texture2D" uid="uid://c5cj270x3v51c" path="res://addons/Teclas/T_Mouse_Left_Key_White.png" id="9_4f0ct"]
+[ext_resource type="Texture2D" uid="uid://tuhie6ayi3ib" path="res://addons/Teclas/T_Mouse_Right_Key_White.png" id="10_ja822"]
+[ext_resource type="Texture2D" uid="uid://cqfl6lellm7d1" path="res://addons/enemies/Eyer.png" id="11_et6rq"]
+[ext_resource type="Texture2D" uid="uid://rxt74jinw6kw" path="res://addons/enemies/png/fly_2.png" id="12_vbdi5"]
+[ext_resource type="Texture2D" uid="uid://dq33dpojr78oh" path="res://addons/enemies/png/idle_5.png" id="13_1e7a1"]
+[ext_resource type="Texture2D" uid="uid://10ei8e3bragv" path="res://addons/enemies/png/Chara - BlueIdle00003.png" id="14_v7og4"]
+[ext_resource type="Texture2D" uid="uid://dyqpwjnkhklau" path="res://addons/enemies/Torch_Purple.png" id="15_saluu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pktq7"]
+texture = ExtResource("1_063di")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(1, 1, 0.494118, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_5yp6u"]
+font_names = PackedStringArray("Good Times")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_aa3r1"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 60
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.933333)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1087t"]
+texture = ExtResource("2_mrhn8")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(0.729412, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6rp51"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 30
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.933333)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5alye"]
+texture = ExtResource("2_mrhn8")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 192, 192)
+modulate_color = Color(1, 0.839216, 0.678431, 0.662745)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8sw6"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 19
+font_color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3rwf"]
+texture = ExtResource("3_mf6kj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc6ok"]
+texture = ExtResource("4_cers7")
+
+[sub_resource type="LabelSettings" id="LabelSettings_76vn7"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 25
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.933333)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrcia"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 31
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.933333)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ahlr"]
+texture = ExtResource("5_b3vei")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p40dt"]
+texture = ExtResource("6_wliyx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3he8u"]
+texture = ExtResource("7_4fe4y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8rwi"]
+texture = ExtResource("8_tiolq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3acb"]
+texture = ExtResource("9_4f0ct")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7bn3"]
+texture = ExtResource("10_ja822")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3t22m"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 19
+font_color = Color(0.0962047, 0.0962048, 0.0962047, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_atlh5"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 31
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.933333)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6udo"]
+texture = ExtResource("11_et6rq")
+region_rect = Rect2(656, 48, 48, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbmr3"]
+texture = ExtResource("12_vbdi5")
+region_rect = Rect2(528, 896, 880, 816)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_elb58"]
+texture = ExtResource("13_1e7a1")
+region_rect = Rect2(656, 1024, 688, 800)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khob0"]
+texture = ExtResource("14_v7og4")
+region_rect = Rect2(112, 64, 304, 384)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vkmk"]
+texture = ExtResource("15_saluu")
+region_rect = Rect2(400, 224, 128, 112)
+
+[sub_resource type="LabelSettings" id="LabelSettings_buo7d"]
+font = SubResource("SystemFont_5yp6u")
+font_size = 19
+font_color = Color(0.0962047, 0.0962048, 0.0962047, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameLoading" type="CanvasLayer"]
+process_mode = 4
+script = ExtResource("1_vtlr5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 0.960784)
+
+[node name="BannerTop" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -343.5
+offset_top = 31.0
+offset_right = 343.5
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pktq7")
+
+[node name="Label" type="Label" parent="BannerTop"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -255.0
+offset_top = 14.0
+offset_right = 256.0
+offset_bottom = 95.0
+grow_horizontal = 2
+text = "HOW TO PLAY"
+label_settings = SubResource("LabelSettings_aa3r1")
+
+[node name="Background" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -533.5
+offset_top = -167.0
+offset_right = 533.5
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1087t")
+
+[node name="Label2" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -502.5
+offset_top = 28.0
+offset_right = -254.5
+offset_bottom = 81.0
+grow_horizontal = 2
+text = "OBJECTIVES"
+label_settings = SubResource("LabelSettings_6rp51")
+
+[node name="Objectives" type="Panel" parent="Background"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 70.0
+offset_right = 276.0
+offset_bottom = 247.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5alye")
+
+[node name="CenterContainer" type="CenterContainer" parent="Background/Objectives"]
+layout_mode = 0
+offset_left = 24.5
+offset_top = 21.0
+offset_right = 215.5
+offset_bottom = 61.0
+
+[node name="GridContainer" type="GridContainer" parent="Background/Objectives/CenterContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 10
+
+[node name="Label3" type="Label" parent="Background/Objectives/CenterContainer/GridContainer"]
+layout_mode = 2
+text = " 1  - KILL ENEMIES"
+label_settings = SubResource("LabelSettings_k8sw6")
+
+[node name="Label4" type="Label" parent="Background/Objectives/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "2 - Collect itens"
+label_settings = SubResource("LabelSettings_k8sw6")
+
+[node name="Label5" type="Label" parent="Background/Objectives/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "3 - Explore"
+label_settings = SubResource("LabelSettings_k8sw6")
+
+[node name="Label6" type="Label" parent="Background/Objectives/CenterContainer/GridContainer"]
+layout_mode = 2
+text = "4 - survive"
+label_settings = SubResource("LabelSettings_k8sw6")
+
+[node name="Collectibles" type="Panel" parent="Background"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 307.0
+offset_right = 277.0
+offset_bottom = 436.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5alye")
+
+[node name="Panel" type="Panel" parent="Background/Collectibles"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 46.0
+offset_right = 95.0
+offset_bottom = 94.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j3rwf")
+
+[node name="Panel2" type="Panel" parent="Background/Collectibles"]
+layout_mode = 0
+offset_left = 147.5
+offset_top = 46.0
+offset_right = 204.5
+offset_bottom = 94.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rc6ok")
+
+[node name="Label3" type="Label" parent="Background/Collectibles"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.5
+offset_top = -48.0
+offset_right = 131.5
+offset_bottom = 5.0
+grow_horizontal = 2
+text = "Collectibles"
+label_settings = SubResource("LabelSettings_76vn7")
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 185.0
+offset_right = 18.0
+offset_bottom = 238.0
+grow_horizontal = 2
+text = "Controls"
+label_settings = SubResource("LabelSettings_rrcia")
+
+[node name="Controls" type="Panel" parent="."]
+offset_left = 343.0
+offset_top = 227.0
+offset_right = 576.0
+offset_bottom = 593.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5alye")
+
+[node name="Panel" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 28.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4ahlr")
+
+[node name="Panel2" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 76.0
+offset_right = 140.0
+offset_bottom = 124.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p40dt")
+
+[node name="Panel3" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 76.0
+offset_right = 92.0
+offset_bottom = 124.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3he8u")
+
+[node name="Panel4" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 76.0
+offset_right = 188.0
+offset_bottom = 124.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e8rwi")
+
+[node name="Panel9" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 212.0
+offset_right = 112.0
+offset_bottom = 291.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j3acb")
+
+[node name="Panel10" type="Panel" parent="Controls"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 212.0
+offset_right = 193.0
+offset_bottom = 291.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n7bn3")
+
+[node name="Label7" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 68.0
+offset_top = 131.0
+offset_right = 152.0
+offset_bottom = 154.0
+text = " MOVE"
+label_settings = SubResource("LabelSettings_3t22m")
+
+[node name="Label8" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 62.0
+offset_top = 306.0
+offset_right = 178.0
+offset_bottom = 329.0
+text = "attack"
+label_settings = SubResource("LabelSettings_3t22m")
+
+[node name="Enemies" type="Panel" parent="."]
+offset_left = 606.0
+offset_top = 227.0
+offset_right = 1077.0
+offset_bottom = 593.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5alye")
+
+[node name="Label4" type="Label" parent="Enemies"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.5
+offset_top = -42.0
+offset_right = 150.5
+offset_bottom = 11.0
+grow_horizontal = 2
+text = "Enemies"
+label_settings = SubResource("LabelSettings_atlh5")
+
+[node name="Panel" type="Panel" parent="Enemies"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 54.0
+offset_right = 121.0
+offset_bottom = 143.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_s6udo")
+
+[node name="Panel2" type="Panel" parent="Enemies"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 49.0
+offset_right = 249.0
+offset_bottom = 126.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cbmr3")
+
+[node name="Panel3" type="Panel" parent="Enemies"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 49.0
+offset_right = 390.0
+offset_bottom = 126.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_elb58")
+
+[node name="Panel4" type="Panel" parent="Enemies"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 223.0
+offset_right = 391.0
+offset_bottom = 300.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_khob0")
+
+[node name="Panel5" type="Panel" parent="Enemies"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 212.0
+offset_right = 160.0
+offset_bottom = 299.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vkmk")
+
+[node name="Label9" type="Label" parent="Enemies"]
+layout_mode = 2
+offset_left = 121.0
+offset_top = 143.0
+offset_right = 317.0
+offset_bottom = 166.0
+text = "Enemies level 1"
+label_settings = SubResource("LabelSettings_buo7d")
+
+[node name="Label10" type="Label" parent="Enemies"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 317.0
+offset_right = 221.0
+offset_bottom = 340.0
+text = "Enemy level 2"
+label_settings = SubResource("LabelSettings_buo7d")
+
+[node name="Label11" type="Label" parent="Enemies"]
+layout_mode = 2
+offset_left = 249.0
+offset_top = 317.0
+offset_right = 445.0
+offset_bottom = 340.0
+text = "Enemy level 3"
+label_settings = SubResource("LabelSettings_buo7d")
+
+[connection signal="mouse_entered" from="Background" to="." method="_on_background_mouse_entered"]

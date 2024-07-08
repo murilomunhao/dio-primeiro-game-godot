@@ -1,0 +1,139 @@
+[gd_scene load_steps=18 format=3 uid="uid://c6qc4gmwrb80l"]
+
+[ext_resource type="Script" path="res://ui/game_start.gd" id="1_bmjj8"]
+[ext_resource type="Texture2D" uid="uid://d0j650w4y5khc" path="res://addons/Tiny Swords (Update 010)/UI/Banners/Carved_9Slides.png" id="1_ra2f4"]
+[ext_resource type="Texture2D" uid="uid://tvhksjavp28f" path="res://addons/Hero/Knitgh.png" id="2_p3a5v"]
+[ext_resource type="Texture2D" uid="uid://uc7akgaykmja" path="res://addons/Ui/ExportedIcons/Item5.png" id="3_yu61m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0deu"]
+texture = ExtResource("1_ra2f4")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y752a"]
+texture = ExtResource("1_ra2f4")
+texture_margin_left = 16.0
+texture_margin_top = 48.0
+texture_margin_right = 16.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(0.689135, 0.641201, 0.988773, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_lmtj3"]
+font_names = PackedStringArray("Good Times")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2la65"]
+font = SubResource("SystemFont_lmtj3")
+font_size = 90
+font_color = Color(1, 0.584314, 0.301961, 1)
+outline_size = 10
+outline_color = Color(0.103744, 0.103744, 0.103744, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vtvk"]
+texture = ExtResource("2_p3a5v")
+region_rect = Rect2(208, 64, 96, 64)
+
+[sub_resource type="SystemFont" id="SystemFont_y8hv1"]
+font_names = PackedStringArray("Good Times")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv52i"]
+texture = ExtResource("3_yu61m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdxks"]
+texture = ExtResource("3_yu61m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7mnj"]
+texture = ExtResource("3_yu61m")
+
+[sub_resource type="SystemFont" id="SystemFont_wlshb"]
+font_names = PackedStringArray("Good Times")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_das2m"]
+texture = ExtResource("3_yu61m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtmm5"]
+texture = ExtResource("3_yu61m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pxbpi"]
+texture = ExtResource("3_yu61m")
+
+[node name="GameStart" type="CanvasLayer"]
+script = ExtResource("1_bmjj8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w0deu")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -410.0
+offset_top = 154.0
+offset_right = 410.0
+offset_bottom = 520.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_y752a")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -410.0
+offset_top = 23.0
+offset_right = 410.0
+offset_bottom = 132.0
+grow_horizontal = 2
+text = "warrior Girl"
+label_settings = SubResource("LabelSettings_2la65")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 227.0
+offset_right = 424.0
+offset_bottom = 520.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1vtvk")
+
+[node name="ButtonStart" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 297.0
+offset_right = 799.0
+offset_bottom = 351.0
+theme_override_fonts/font = SubResource("SystemFont_y8hv1")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_uv52i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tdxks")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x7mnj")
+text = "PLAY"
+
+[node name="ButtonExit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 372.0
+offset_right = 799.0
+offset_bottom = 426.0
+theme_override_fonts/font = SubResource("SystemFont_wlshb")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_das2m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dtmm5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pxbpi")
+text = "QUIT GAME"
+
+[connection signal="pressed" from="Panel/ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="Panel/ButtonExit" to="." method="_on_button_exit_pressed"]
